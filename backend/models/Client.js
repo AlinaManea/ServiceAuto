@@ -22,6 +22,10 @@ const Client = db.define("Client", {
         type:Sequelize.STRING,
         allowNull:false,
         unique: true
+    },
+    status: {  
+        type: Sequelize.ENUM("activ", "inactiv"),
+        defaultValue: 'activ'
     }
 },
 {

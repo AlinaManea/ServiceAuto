@@ -6,7 +6,7 @@ const Car = db.define("Car", {
     idCar: {
         type: Sequelize.INTEGER,
         primaryKey: true,
-        unique:true,
+        autoIncrement: true,
         allowNull: false
     },
     idClient: {

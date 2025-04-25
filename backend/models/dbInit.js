@@ -39,7 +39,7 @@ async function createDB() {
     Car.hasMany(Appointment, { foreignKey: "idCar" });
     Appointment.belongsTo(Car, { foreignKey: "idCar" });
 
-    // Relația 1-N între Client și Appointment
+    // Relația 1-N între client și programari
 Client.hasMany(Appointment, { foreignKey: "idClient" });
 Appointment.belongsTo(Client, { foreignKey: "idClient" });
 
@@ -72,7 +72,7 @@ IstoricService.belongsTo(Appointment, { foreignKey: "idAppointment" });
 }
 async function syncModels() {
     try {
-        await db.sync({ alter: true });; 
+        await db.sync({alter: true });; 
         // console.log('Tabelele au fost create/actualizate în baza de date.');
     } catch (error) {
         console.error('Eroare la sincronizarea modelelor:', error);
