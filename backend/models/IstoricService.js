@@ -55,7 +55,7 @@ const IstoricService = db.define("IstoricService", {
         }
     },
     dataFinalizare:{
-        type:Sequelize.DATE,
+        type:Sequelize.DATEONLY,
         allowNull:true
     },
     pretFinal:{

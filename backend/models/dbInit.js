@@ -73,7 +73,7 @@ IstoricService.belongsTo(Appointment, { foreignKey: "idAppointment" });
 async function syncModels() {
     try {
         await db.sync({alter: true });; 
-        // console.log('Tabelele au fost create/actualizate în baza de date.');
+      
     } catch (error) {
         console.error('Eroare la sincronizarea modelelor:', error);
     }
@@ -81,7 +81,8 @@ async function syncModels() {
 async function dbInit()
 {
    await createDB();
+   fkConfig();
    await syncModels();
-    fkConfig();
+   
 }
 export default dbInit;

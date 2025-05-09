@@ -15,8 +15,7 @@ const Client = db.define("Client", {
     },
     email:{
         type:Sequelize.STRING,
-        allowNull:false,
-        unique: true
+        allowNull:false
     },
     telefon:{
         type:Sequelize.STRING,

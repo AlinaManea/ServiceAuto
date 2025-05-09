@@ -26,7 +26,7 @@ const Appointment = db.define("Appointment", {
         allowNull: false
     },
     data:{
-        type:Sequelize.DATE,
+        type:Sequelize.DATEONLY,
         allowNull:false
 
     },

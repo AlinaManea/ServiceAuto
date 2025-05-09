@@ -1,0 +1,942 @@
+{
+	"info": {
+		"_postman_id": "bfb7716b-3838-476a-9cfb-981ca5db8d0f",
+		"name": "Service Auto",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38896207"
+	},
+	"item": [
+		{
+			"name": "clienti + masini",
+			"item": [
+				{
+					"name": "adaugare client",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nume\": \"Toma Alex\",\r\n    \"email\": \"tomaalex@gmail.com\",\r\n    \"telefon\": \"0764568790\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/client/adauga-client",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"client",
+								"adauga-client"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "toti clientii",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/client/toti-clientii",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"client",
+								"toti-clientii"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/client/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"client",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "stergere client",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/client/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"client",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizare date client",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nume\": \"Ion Popescu\",\r\n    \"email\": \"ionpopescu@gmail.com\",\r\n    \"telefon\": \"0724455999\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/client/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"client",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "inactivare client",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/client/inactivare/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"client",
+								"inactivare",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reactivare client",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/client/reactivare/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"client",
+								"reactivare",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "adaugare masina",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"serie\": \"ABC123\",\r\n  \"marca\": \"BMW\",\r\n  \"model\": \"11\",\r\n  \"anFabricatie\": 2019,\r\n  \"tipMotor\": \"diesel\",\r\n  \"capacitateMotor\": 50,\r\n  \"caiPutere\": 65\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/client/1/masini",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"client",
+								"1",
+								"masini"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get masina by id  client",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/client/masini/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"client",
+								"masini",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editare masina",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"capacitateMotor\": 2\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/client/masini/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"client",
+								"masini",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cautare masina",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "get masina by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/client/masini/3\n",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"client",
+								"masini",
+								"3\n"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "stergere masina",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/client/masini/9\n",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"client",
+								"masini",
+								"9\n"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filtrare dupa ani",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/client/masini/filter?startYear=2010&endYear=2020\n",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"client",
+								"masini",
+								"filter"
+							],
+							"query": [
+								{
+									"key": "startYear",
+									"value": "2010"
+								},
+								{
+									"key": "endYear",
+									"value": "2020\n"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "programari",
+			"item": [
+				{
+					"name": "creare programare",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"idCar\": 1,\r\n  \"idClient\": 1,\r\n  \"modalitateContact\": \"telefon\",\r\n  \"actiune\": \"Revizie tehnică\",\r\n  \"data\": \"2025-04-27\", \r\n  \"intervalTimp\": \"10:00\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/programari/creare-programare",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"programari",
+								"creare-programare"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get prog by id car",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/programari/masina/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"programari",
+								"masina",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get prog by id client",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "editare programare",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"actiune\": \"revizie ulei\",\r\n  \"data\": \"2025-05-10\",\r\n  \"intervalTimp\": \"10:30\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/programari/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"programari",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filtrare prog interval",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "stergere programare",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/programari/12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"programari",
+								"12"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "piese auto",
+			"item": [
+				{
+					"name": "adaugare tip piesa",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"denumire\": \"Lampa far\",\r\n  \"marca\": \"Philips\",\r\n  \"descriere\": \"Lampa far cu LED pentru autoturisme\",\r\n  \"stoc\": 40,\r\n  \"pretUnitar\": 135.99,\r\n  \"activ\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/piese/adauga-piesa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"piese",
+								"adauga-piesa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "vizualizare toate piesele",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/piese/toate-piesele",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"piese",
+								"toate-piesele"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by id piesa",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/piese/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"piese",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editare piesa",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pretUnitar\": 250.00\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/piese/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"piese",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pt stoc",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"stoc\": 0\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/piese/3/stoc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"piese",
+								"3",
+								"stoc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "desable pt piesa cu stoc 0",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/piese/3/disable",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"piese",
+								"3",
+								"disable"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "disable pt piesa cu stoc>0",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/piese/4/disable",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"piese",
+								"4",
+								"disable"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "enable",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/piese/4/enable",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"piese",
+								"4",
+								"enable"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "stergere piesa",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/piese/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"piese",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "istoric",
+			"item": [
+				{
+					"name": "PRIMIRE",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var template = `\r",
+									"<style type=\"text/css\">\r",
+									"    .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}\r",
+									"    .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}\r",
+									"    .tftable tr {background-color:#ffffff;}\r",
+									"    .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}\r",
+									"    .tftable tr:hover {background-color:#e0ffff;}\r",
+									"</style>\r",
+									"\r",
+									"<table class=\"tftable\" border=\"1\">\r",
+									"    <tr>\r",
+									"        <th>Error Message</th>\r",
+									"    </tr>\r",
+									"    <tr>\r",
+									"        <td>{{response.message}}</td>\r",
+									"    </tr>\r",
+									"</table>\r",
+									"`;\r",
+									"\r",
+									"function constructVisualizerPayload() {\r",
+									"    return { response: pm.response.json() }\r",
+									"}\r",
+									"\r",
+									"pm.visualizer.set(template, constructVisualizerPayload());"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idAppointment\": 1,\r\n    \"probleme\": \"Pompă de apă defectă\",\r\n    \"tipServiciu\": \"Revizie\",\r\n    \"status\": \"Primire\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/istoric/adauga",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"istoric",
+								"adauga"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update la Primire",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idAppointment\": 1,\r\n    \"probleme\": \"Pompă de apă defectă, ulei schimbat\",\r\n    \"tipServiciu\": \"Revizie\",\r\n    \"status\": \"Primire\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/istoric/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"istoric",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PROCESARE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idIstoric\":2,\r\n    \"operatiuni\": \"DADA sisteme electrice\",\r\n    \"pieseSchimbate\": [\r\n        {\"idPart\": 5, \"cantitate\": 1},\r\n        {\"idPart\": 1, \"cantitate\": 1}\r\n    ],\r\n    \"problemeIdentificate\": \"Probleme la alternator, baterie epuizată, ulei nj cum\",\r\n    \"reparat\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/istoric/procesare",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"istoric",
+								"procesare"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update procesare",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"operatiuni\": \"Verificare sisteme electrice\",\r\n    \"pieseSchimbate\": [\r\n        {\"idPart\": 5, \"cantitate\": 1},\r\n        {\"idPart\": 1, \"cantitate\": 1}\r\n    ],\r\n    \"problemeIdentificate\": \"Probleme la alternator, baterie epuizată, ulei nj cum\",\r\n    \"reparat\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/istoric/update/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"istoric",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FINALIZARE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dataFinalizare\": \"2025-05-09\",\r\n    \"durataReparatie\": 120\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/istoric/finalizare/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"istoric",
+								"finalizare",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by id Programare",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/istoric/programare/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"istoric",
+								"programare",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by id masina",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "BONUS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/istoric/cost-total-7-zile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"istoric",
+								"cost-total-7-zile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
